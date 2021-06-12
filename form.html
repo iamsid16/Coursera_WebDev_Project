@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+   <link rel="stylesheet" type="text/css" href="form.css">
+   <script src="form.js"></script>
+          <title>Online Books</title>  
+</head>
+<body>
+<form action="#" method="post">
+   <h1 id="header" align="center">order books</h1>
+   <p id="para1">This form is created for the purpose of ordering books online. It includes various basic input types along with validation of some of those 
+                 types by using Java Script and styling of the form by means of CSS.</p>
+ <div class="abc1">
+      <label for="frstnme">First Name:</label>
+      <input type="text" id="frstnme" name="firstname" placeholder="Enter First Name" required><br>                                 
+      <label for="lstnme">Last Name:&nbsp;</label>
+      <input type="text" id="lstnme" name="lastname" placeholder="Enter Last Name" required><br>                                   
+      <label for="usrname">Username:&ensp;</label>
+      <input type="text" id="usrnme" name="username" placeholder="Enter Username"onblur="validateusername()"><br>                    
+      <label for="eml">Email Id:&emsp;</label>
+      <input type="email" id="eml" placeholder="Enter Email Id"onblur="validateemail()"><br>
+      <label for="pswrd">Password:&ensp;</label>
+      <input type="password" id="pswrd" name="password" placeholder="Enter Password"onblur="validatepassword()"><br><br>  
+                               <!------------------------------------------Checkbox starts--------------------------------------->
+ <b>List of books and quantity of each:</b><br><br> 
+     <input type="checkbox" id="book1" name="book" value="Gulliver's travels" checked>
+     <label for="book1">Gulliver's travels</label>
+     <input type="number" id="quantity" name="quantity" min="1" max="3"><br>
+     <input type="checkbox" id="book2" name="book" value="Harry Potter" >
+     <label for="book2">Harry Potter</label>
+     <input type="number" id="quantity" name="quantity" min="1" max="3"><br>
+     <input type="checkbox" id="book3" name="book" value="Pirates of the Caribbean" >
+     <label for="book3">Pirates of the Caribbean</label>
+     <input type="number" id="quantity" name="quantity" min="1" max="3"><br><br>
+                              <!------------------------------Checkbox ends and Radio buttons start------------------------------>
+ <b>Edition:</b><br><br>
+    <input type="radio" id="box1" name="edition" checked>
+    <label for="box1">First<label><br>
+    <input type="radio" id="box2" name="edition">
+    <label for="box2">Second</label><br>
+    <input type="radio" id="box3" name="edition">
+    <label for="box3">Third</label><br><br>
+                              <!------------------------------Radio button ends------------------------------------------------->
+   <label for="purchase date">Purchase Date:</label>
+   <input type="date" id="purchase date" name="purchase date" min="2019-06-21" max="2022-06-21"><br><br>
+   <label for="clr">Colour of the cover:</label>
+   <input type="color" id="clr" name="frontpgeclr"><br><br>
+   <label for="city">Outlets:</label>
+       <select id="city" name="city">
+	        <option value="pune">Pune</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="banglore">Banglore</option>
+            <option value="delhi">Delhi</option>    
+	   </select><br><br>  
+   <label for="adrs">Address:</label>
+   <input type="text" id="adrs" name="address" required><br><br>                        
+   <label for="nmbr">Contact no:</label>
+   <input type="tel" id="nmbr" name="mobile no" placeholder="012-345-6789" onblur="validatemob()"><br><br>
+   <input id="button1" type="button" value="Click me to order" onclick="validateemail();validatepassword();validatemob();validateusername()">             
+   <input id="button2" type="reset" value="Reset">
+ </div> 
+</form>
+</body>
+</html>
